@@ -8,12 +8,14 @@
 
 <ion-content [fullscreen]="true">
   <form #formulario = "ngForm">
+    <!--Invoca a função BuscaData()-->
     <ion-button expand="block" (click)="BuscaData()">
       BUSCAR DATA NO SISTEMA
     </ion-button>
   </form>
   
   <ion-card>
+    <!--Card que exibe as informações de data e suas respectivas manipulações, através das variáveis globais-->
     Data do Sistema: {{dtsistema}}<p>
     Dia da Semana: {{semana}}<p>
     Dia da Mês: {{dia}}<p>
