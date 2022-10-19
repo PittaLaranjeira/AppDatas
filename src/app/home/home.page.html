@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      App Datas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form #formulario = "ngForm">
+    <ion-button expand="block" (click)="BuscaData()">
+      BUSCAR DATA NO SISTEMA
+    </ion-button>
+  </form>
+  
+  <ion-card>
+    Data do Sistema: {{dtsistema}}<p>
+    Dia da Semana: {{semana}}<p>
+    Dia da Mês: {{dia}}<p>
+    Mês: {{mes}}<p>
+    Ano: {{ano}}<p>
+    Hoje, {{semana_atual}} {{dia}} de {{mes_atual}} de {{ano_atual}}
+  </ion-card>
 </ion-content>
